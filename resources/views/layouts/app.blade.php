@@ -14,6 +14,10 @@
  @yield('content')
 
  @include('layouts.partials.footer')
-    <script src="{{ asset('assets/js/script.js')}}"></script>
+ @section('script')
+    <script src="{{ asset('assets/js/script.js') }}"></script>
+    @show
+
+
 </body>
 </html>

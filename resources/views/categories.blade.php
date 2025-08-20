@@ -1,6 +1,6 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('content')
-@include('layout.partials.breadcrumbs')
+@include('layouts.partials.breadcrumbs')
 <div class="container mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
         <!-- Articles Section -->
         <main class="lg:w-2/3">
