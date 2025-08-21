@@ -56,6 +56,9 @@
                             <label for="name" class="block text-sm font-medium text-gray-700">Name <span class="text-red-500">*</span></label>
                             <input type="text" id="name" name="name" required
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                            @error('name')
+                                <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <!-- Slug -->
@@ -82,6 +85,9 @@
                             <label for="description" class="block text-sm font-medium text-gray-700">Description <span class="text-red-500">*</span></label>
                             <textarea id="description" name="description" required rows="4"
                                     class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                                    @error('description')
+                                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                                    @enderror
                         </div>
 
                         <!-- Submit Button -->

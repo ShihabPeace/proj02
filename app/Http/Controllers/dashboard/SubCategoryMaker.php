@@ -17,9 +17,9 @@ class SubCategoryMaker extends Controller
 
     public function store(Request $r){
         $r->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:30|unique:sub_categories,name',
             'category_id' => 'required|exists:categories,id',
-            'description' => 'nullable|string|max:1000',
+            'description' => 'nullable|string|max:1000|unique:sub_categories,description',
         ]);
 
         // SubCategory::create([
