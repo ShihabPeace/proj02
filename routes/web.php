@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\dashboard\dashboard;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\Sub_Category_maker;
+use App\Http\Controllers\dashboard\SubCategoryMaker;
 
 Route::get('/', function () {
     return view('home');
@@ -32,21 +33,18 @@ Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->name('dashboard');
 
-Route::get('/category-create', function () {
-    return view('dashboard.category-create');
-})->name('category-create');
+Route::get('/category-create', [SubCategoryMaker::class, 'show'])->name('category.create');
 
 Route::post('/categories-store',
- [Sub_Category_maker::class, 'store']
+ [SubCategoryMaker::class, 'store']
 //  function () {
 //      dd(request()->all());
 //  }
  )->name('sub_categories.store');
 
-Route::get('/category-list', function () {
-    return view('dashboard.category-list');
-})->name('category-list');
+Route::get('/category-list', [dashboard::class, 'Categories_index'])->name('category.list');
 
 // Route::get('/all-posts', function () {
 //     return view('dashboard.all-posts');
 // })->name('all-post');
+route::get('/all-posts', [CategoryController::class, 'index'])->name('all-posts');

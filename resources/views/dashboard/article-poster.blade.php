@@ -53,6 +53,9 @@
                         @csrf
                         <!-- name -->
                         <div>
+                            <div>@error('name')
+                                <span class="text-red-500 text-sm">{{ $message }}</span>
+                            @enderror</div>
                             <label for="name" class="block text-sm font-medium text-gray-700">Name <span class="text-red-500">*</span></label>
                             <input type="text" id="name" name="name" required
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
@@ -67,21 +70,43 @@
 
                         <!-- Parent Category -->
                         <div>
-                            <label for="category_id" class="block text-sm font-medium text-gray-700">Parent Category <span class="text-red-500">*</span></label>
+                            <label for="category_id" class="block text-sm font-medium text-gray-700">Parent SubCategory <span class="text-red-500">*</span></label>
                             <select id="category_id" name="category_id" required
                                     class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 bg-white focus:ring-blue-500 focus:border-blue-500">
-                                    <option value="">Select Parent Category</option>
+                                    <option value="">Select Parent SubCategory</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
                             </select>
                         </div>
-
-                        <!-- Description -->
+                         <!-- Parent SubCategory -->
+                         <div>
+                            <label for="sub_category_id" class="block text-sm font-medium text-gray-700">Parent SubCategory <span class="text-red-500">*</span></label>
+                            <select id="sub_category_id" name="sub_category_id" required
+                                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 bg-white focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select Parent SubCategory</option>
+                                    @foreach ($subcategories as $subcategory)
+                                        <option value="{{ $subcategory->id }}">{{ $subcategory->name }}</option>
+                                    @endforeach
+                            </select>
+                        </div>
+                        <!-- article_Content -->
                         <div>
-                            <label for="description" class="block text-sm font-medium text-gray-700">Description <span class="text-red-500">*</span></label>
-                            <textarea id="description" name="description" required rows="4"
+                            <label for="article_Content" class="block text-sm font-medium text-gray-700">Body <span class="text-red-500">*</span></label>
+                            <textarea id="article_Content" name="article_Content" required rows="4"
                                     class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        
+                        <!-- role -->
+                        <div>
+                            <label for="role" class="block text-sm font-medium text-gray-700">Role <span class="text-red-500">*</span></label>
+                            <select id="role" name="role" required
+                                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 bg-white focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">Select Role</option>
+                                <option value="author">Author</option>
+                                <option value="editor">Editor</option>
+                                <option value="admin">Admin</option>
+                            </select>
                         </div>
 
                         <!-- Submit Button -->

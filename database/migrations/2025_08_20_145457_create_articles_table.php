@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('article_Name');
             $table->text('article_Content');
-            $table->string('article_Author');
-            $table->string('article_Category');
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            $table->foreignId('sub_category_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

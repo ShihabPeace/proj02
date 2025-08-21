@@ -10,10 +10,10 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    public function articles(): HasMany
-    {
-        return $this->hasMany(Article::class, 'article_Author', 'id');
-    }
+    // public function articles(): HasMany
+    // {
+    //     return $this->hasMany(Article::class, 'article_Author', 'id');
+    // }
     
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;

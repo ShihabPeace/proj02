@@ -39,4 +39,5 @@
                 </div>
                 <a href="#" class="text-gray-600 hover:text-blue-600 transition">About</a>
                 <a href="#" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                <a href="{{ route('dashboard') }}" class="text-gray-600 hover:text-blue-600 transition">dashboard</a>
             </nav>
