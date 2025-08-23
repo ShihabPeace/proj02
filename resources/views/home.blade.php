@@ -38,7 +38,7 @@
 
                             <h3 class="text-xl font-bold mb-2 text-gray-800">{{ $article->article_name }}</h3>
                             <p class="text-gray-600 mb-4">{{ Str::limit($article->article_Content, 80) }}.</p>
-                            <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition">Read More</a>
+                            <a href="{{ route('single-blog', $article->slug) }}" class="text-blue-600 font-medium hover:text-blue-800 transition">Read More</a>
                         </div>
                     </div>
                 @endforeach

@@ -20,9 +20,6 @@ Route::get('/register', function () {
     return view('register');
 })->name('register');
 
-Route::get('/single-blog', function () {
-    return view('single-blog');
-})->name('single-blog');
 
 Route::get('/profile', function () {
     return view('profile');
@@ -45,3 +42,5 @@ Route::view('/dashboard', 'dashboard.dashboard')->name('dashboard');
 
 Route::get('/categories-list', [dashboard::class, 'index'])->name('categorylist.view');
 Route::get('/articles-list', [dashboard::class, 'articleIndex'])->name('article.list.view');
+
+Route::get('/single-blog/{article:slug}', [ArticleMaker::class, 'show_article'])->name('single-blog');

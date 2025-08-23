@@ -129,7 +129,8 @@
                                 class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-md">
                                 Create Category
                             </button>
-                        </div>@if ($errors->any())
+                        </div>
+                        @if ($errors->any())
                     <div class="text-red-500">
                         <ul>
                             @foreach ($errors->all() as $error)

@@ -8,9 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Article extends Model
 {
-    use Sluggable;
 
-    protected $fillable = ['article_Name', 'article_Content', 'category_id', 'sub_category_id'];
+    protected $fillable = ['article_Name', 'article_Content', 'category_id', 'sub_category_id','slug'];
 
     public function category(): BelongsTo
     {
@@ -20,11 +19,9 @@ class Article extends Model
     {
         return $this->belongsTo(SubCategory::class);
     }
-    public function sluggable():array{
-        return[
-            'slug'=>[
-                'source'=> 'title'
-            ]
-        ];
+
+    public function  getRoutekey()
+    {
+        return 'slug';
     }
 }
