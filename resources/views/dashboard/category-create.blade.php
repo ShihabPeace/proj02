@@ -49,7 +49,7 @@
             <main class="px-4 py-6 sm:px-6 lg:px-8">
                 <div class="bg-white p-6 rounded-lg shadow-md mb-8 max-w-3xl mx-auto">
                     <h2 class="text-xl font-bold mb-4 text-gray-800">Create New Category</h2>
-                    <form action="{{ route('sub_categories.store') }}" method="POST" class="space-y-6">
+                    <form action="{{ route('categories.store') }}" method="POST" class="space-y-6">
                         @csrf
                         <!-- name -->
                         <div>
@@ -69,7 +69,7 @@
                         </div> --}}
 
                         <!-- Parent Category -->
-                        <div>
+                        {{-- <div>
                             <label for="category_id" class="block text-sm font-medium text-gray-700">Parent Category <span class="text-red-500">*</span></label>
                             <select id="category_id" name="category_id" required
                                     class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 bg-white focus:ring-blue-500 focus:border-blue-500">
@@ -78,12 +78,12 @@
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
                             </select>
-                        </div>
+                        </div> --}}
 
                         <!-- Description -->
                         <div>
                             <label for="description" class="block text-sm font-medium text-gray-700">Description <span class="text-red-500">*</span></label>
-                            <textarea id="description" name="description" required rows="4"
+                            <textarea id="description" name="description"  rows="4"
                                     class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
                                     @error('description')
                                         <p class="mt-2 text-sm text-red-600">{{ $message }}</p>

@@ -12,7 +12,7 @@ class SubCategoryMaker extends Controller
      public function show()
     {
         $categories = Category::all();
-        return view('dashboard.category-create', compact('categories'));
+        return view('dashboard.subcategory-create', compact('categories'));
     }
 
     public function store(Request $r){

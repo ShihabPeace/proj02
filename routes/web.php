@@ -2,12 +2,11 @@
 
 use App\Http\Controllers\dashboard\dashboard;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\dashboard\ArticleMaker;
+use App\Http\Controllers\dashboard\CategoryMaker;
 use App\Http\Controllers\dashboard\SubCategoryMaker;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [dashboard::class,'home'])->name('home');
 
 Route::get('/categories', function () {
     return view('categories');
@@ -33,18 +32,16 @@ Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->name('dashboard');
 
-Route::get('/category-create', [SubCategoryMaker::class, 'show'])->name('category.create');
+Route::get('/categories-view', [CategoryMaker::class, 'show'])->name('category.view');
+Route::post('/category-create', [CategoryMaker::class, 'store'])->name('categories.store');
 
-Route::post('/categories-store',
- [SubCategoryMaker::class, 'store']
-//  function () {
-//      dd(request()->all());
-//  }
- )->name('sub_categories.store');
+Route::get('/subcategories-view', [SubCategoryMaker::class, 'show'] )->name('subcategory.view');
+Route::post('/subcategory-create', [SubCategoryMaker::class, 'store'])->name('subcategories.store');
 
-Route::get('/category-list', [dashboard::class, 'Categories_index'])->name('category.list');
+Route::get('/articles-view', [ArticleMaker::class, 'show'])->name('article.view');
+Route::post('/article-create', [ArticleMaker::class, 'store'])->name('article.store');
 
-// Route::get('/all-posts', function () {
-//     return view('dashboard.all-posts');
-// })->name('all-post');
-route::get('/all-posts', [CategoryController::class, 'index'])->name('all-posts');
+Route::view('/dashboard', 'dashboard.dashboard')->name('dashboard');
+
+Route::get('/categories-list', [dashboard::class, 'index'])->name('categorylist.view');
+Route::get('/articles-list', [dashboard::class, 'articleIndex'])->name('article.list.view');

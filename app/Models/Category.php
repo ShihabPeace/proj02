@@ -7,14 +7,12 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends Model
 {
-    public function articles(): HasMany
-    {
-        return $this->hasMany(Article::class, 'category_id', 'id');
-    }
+    protected $fillable = ['name', 'description'];
 
     public function subCategories(): HasMany
     {
-        return $this->hasMany(SubCategory::class, 'category_id', 'id');
+        return $this->hasMany(SubCategory::class);
     }
-    
+
+   
 }

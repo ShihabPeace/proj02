@@ -1,5 +1,5 @@
 <nav class="hidden md:flex space-x-8 items-center">
-                <a href="./index.html" class="text-blue-600 font-medium">Home</a>
+                <a href="{{ route('home') }}" class="text-blue-600 font-medium">Home</a>
                 <!-- Categories Dropdown -->
                 <div class="relative desktop-dropdown">
                     <button class="text-gray-600 hover:text-blue-600 py-4 transition flex items-center">
