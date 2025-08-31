@@ -11,12 +11,12 @@ class dashboard extends Controller
 {
     public function index()
     {
-        $category_list = Category::get();
+        $category_list = Category::paginate(5);
         return view('dashboard.category-list')->with(compact('category_list'));
     }
     public function articleIndex()
     {
-        $articles =  Article::get();
+        $articles =  Article::paginate(10);
         // $a = $articles->;
 
         // dd($a);
