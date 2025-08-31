@@ -29,12 +29,6 @@
                                 <i class="fas fa-pen mr-3 text-xs"></i>
                                 <span>Create Category</span>
                             </a>
-                            {{-- createsubcategory --}}
-                        
-                            <a href="{{ route('subcategory.view') }}" class="flex items-center px-3 py-2 text-sm rounded-md text-gray-300 hover:bg-gray-700 hover:text-white pl-11">
-                                <i class="fas fa-pen mr-3 text-xs"></i>
-                                <span>Create Subcategory</span>
-                            </a>
                             <a href="{{ route('categorylist.view') }}" class="flex items-center px-3 py-2 text-sm rounded-md text-gray-300 hover:bg-gray-700 hover:text-white pl-11">
                                 <i class="fas fa-pen mr-3 text-xs"></i>
                                 <span>Category List</span>

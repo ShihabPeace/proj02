@@ -4,7 +4,6 @@ use App\Http\Controllers\dashboard\dashboard;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\dashboard\ArticleMaker;
 use App\Http\Controllers\dashboard\CategoryMaker;
-use App\Http\Controllers\dashboard\SubCategoryMaker;
 
 Route::get('/', [dashboard::class,'home'])->name('home');
 
@@ -31,9 +30,6 @@ Route::get('/dashboard', function () {
 
 Route::get('/categories-view', [CategoryMaker::class, 'show'])->name('category.view');
 Route::post('/category-create', [CategoryMaker::class, 'store'])->name('categories.store');
-
-Route::get('/subcategories-view', [SubCategoryMaker::class, 'show'] )->name('subcategory.view');
-Route::post('/subcategory-create', [SubCategoryMaker::class, 'store'])->name('subcategories.store');
 
 Route::get('/articles-view', [ArticleMaker::class, 'show'])->name('article.view');
 Route::post('/article-create', [ArticleMaker::class, 'store'])->name('article.store');

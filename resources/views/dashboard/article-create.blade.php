@@ -85,21 +85,9 @@
                                 <span class="text-red-500">*</span></label>
                             <select id="category_id" name="category_id" required
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 bg-white focus:ring-blue-500 focus:border-blue-500">
-                                <option value="">Select Parent SubCategory</option>
+                                <option value="">Select Parent Category</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <!-- Parent SubCategory -->
-                        <div>
-                            <label for="sub_category_id" class="block text-sm font-medium text-gray-700">Parent SubCategory
-                                <span class="text-red-500">*</span></label>
-                            <select id="sub_category_id" name="sub_category_id" required
-                                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 bg-white focus:ring-blue-500 focus:border-blue-500">
-                                <option value="">Select Parent SubCategory</option>
-                                @foreach ($sub_categories as $subcategory)
-                                    <option value="{{ $subcategory->id }}">{{ $subcategory->name }}</option>
                                 @endforeach
                             </select>
                         </div>

@@ -262,36 +262,7 @@
                 </div>
             </div>
             
-            <!-- Subcategories -->
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="text-xl font-bold mb-4 text-gray-800">Subcategories</h3>
-                <div class="space-y-2">
-                    <a href="#" class="flex justify-between items-center p-2 hover:bg-gray-100 rounded-md transition">
-                        <span class="text-gray-700">JavaScript</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">24</span>
-                    </a>
-                    <a href="#" class="flex justify-between items-center p-2 hover:bg-gray-100 rounded-md transition">
-                        <span class="text-gray-700">React</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">18</span>
-                    </a>
-                    <a href="#" class="flex justify-between items-center p-2 hover:bg-gray-100 rounded-md transition">
-                        <span class="text-gray-700">Vue.js</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">12</span>
-                    </a>
-                    <a href="#" class="flex justify-between items-center p-2 hover:bg-gray-100 rounded-md transition">
-                        <span class="text-gray-700">Angular</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">9</span>
-                    </a>
-                    <a href="#" class="flex justify-between items-center p-2 hover:bg-gray-100 rounded-md transition">
-                        <span class="text-gray-700">CSS & Design</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">15</span>
-                    </a>
-                    <a href="#" class="flex justify-between items-center p-2 hover:bg-gray-100 rounded-md transition">
-                        <span class="text-gray-700">Performance</span>
-                        <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">7</span>
-                    </a>
-                </div>
-            </div>
+            
             
             <!-- Newsletter Widget -->
             <div class="bg-white p-6 rounded-lg shadow">
